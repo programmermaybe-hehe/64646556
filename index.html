@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Chikuu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" src="Audio/blue.mp3" loop></audio>
+
+<div id="app">
+
+  <!-- SCENE 1 -->
+  <div class="scene active" id="scene1">
+    <h1>HAPPY BIRTHDAY CHIKUU ❤️</h1>
+    <video id="cake" src="Videos/cakee.mp4" autoplay muted loop></video>
+    <p>Cut the cake 🎂</p>
+  </div>
+
+  <!-- SCENE 2 -->
+  <div class="scene" id="scene2">
+    <h2>Gift chahiye?? 🤭</h2>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+    <img id="runner" src="images/runner.jpeg">
+  </div>
+
+  <!-- SCENE 3 -->
+  <div class="scene" id="scene3">
+    <img id="gift" src="images/gift.webp">
+    <p>Gift toh lena hi padega 😝</p>
+  </div>
+
+  <!-- SCENE 4 -->
+  <div class="scene" id="scene4">
+    <img class="letter" src="images/letter.jpeg">
+
+    <div class="memories">
+      <img src="images/memory1.jpg">
+      <img src="images/memory2.png">
+      <img src="images/memory3.jpg">
+      <img src="images/memory4.jpg">
+      <img src="images/memory5.png">
+      <img src="images/memory6.jpg">
+    </div>
+
+    <p class="wish">
+      Happy Birthday, Cheeku.<br><br>
+      Today is meant just for you.<br>
+      You don’t need to change.<br>
+      You are already enough.
+    </p>
+
+    <button onclick="showHug()">Next</button>
+  </div>
+
+  <!-- SCENE 5 -->
+  <div class="scene" id="scene5">
+    <img class="bouquet" src="images/bouquet.jpg">
+    <video src="Videos/hug.mp4" autoplay muted playsinline></video>
+    <p>
+      You matter more than you know.<br>
+      Asli wala gift mil jaayega jaldi 🤍
+    </p>
+    <button onclick="showSae()">Next</button>
+  </div>
+
+  <!-- SCENE 6 -->
+  <div class="scene" id="scene6">
+    <video src="Videos/sae.mp4" controls autoplay></video>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
