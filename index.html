@@ -7,14 +7,14 @@
 </head>
 <body>
 
-<audio id="music" src="Audio/blue.mp3" loop></audio>
+<audio id="music" src="audio/blue.mp3" loop></audio>
 
 <div id="app">
 
   <!-- SCENE 1 -->
   <div class="scene active" id="scene1">
     <h1>HAPPY BIRTHDAY CHIKUU ❤️</h1>
-    <video id="cake" src="Videos/cakee.mp4" autoplay muted loop></video>
+    <video id="cake" src="videos/cakee.mp4" autoplay muted loop></video>
     <p>Cut the cake 🎂</p>
   </div>
 
@@ -33,24 +33,37 @@
   </div>
 
   <!-- SCENE 4 -->
-  <div class="scene" id="scene4">
-    <img class="letter" src="images/letter.jpeg">
+ <!-- Letter -->
+<img id="letter" src="images/letter.jpeg">
 
-    <div class="memories">
-      <img src="images/memory1.jpg">
-      <img src="images/memory2.png">
-      <img src="images/memory3.jpg">
-      <img src="images/memory4.jpg">
-      <img src="images/memory5.png">
-      <img src="images/memory6.jpg">
-    </div>
+<!-- Memories + Wish -->
+<div id="memories" class="hidden">
 
-    <p class="wish">
-      Happy Birthday, Cheeku.<br><br>
-      Today is meant just for you.<br>
-      You don’t need to change.<br>
-      You are already enough.
-    </p>
+  <div class="row">
+    <img src="images/memory1.jpg">
+    <img src="images/memory2.png">
+    <img src="images/memory3.jpg">
+  </div>
+
+  <!-- WISH -->
+  <p id="wishText">
+    Happy Birthday, Chikuuuuu 🤍<br><br>
+    Today is meant just for you.<br>
+    You don’t need to change.<br>
+    You are already enough.<br><br>
+  
+  </p>
+
+  <div class="row">
+    <img src="images/memory4.jpg">
+    <img src="images/memory5.png">
+    <img src="images/memory6.jpg">
+  </div>
+
+  <button id="nextAfterMemories">Next</button>
+</div>
+
+
 
     <button onclick="showHug()">Next</button>
   </div>
@@ -58,7 +71,7 @@
   <!-- SCENE 5 -->
   <div class="scene" id="scene5">
     <img class="bouquet" src="images/bouquet.jpg">
-    <video src="Videos/hug.mp4" autoplay muted playsinline></video>
+    <video src="videos/hug.mp4" autoplay muted playsinline></video>
     <p>
       You matter more than you know.<br>
       Asli wala gift mil jaayega jaldi 🤍
@@ -68,7 +81,7 @@
 
   <!-- SCENE 6 -->
   <div class="scene" id="scene6">
-    <video src="Videos/sae.mp4" controls autoplay></video>
+    <video src="videos/sae.mp4" controls autoplay></video>
   </div>
 
 </div>
