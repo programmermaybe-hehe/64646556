@@ -29,20 +29,50 @@ button {
 }
 
 #runner {
-  width: 120px;
+  position: absolute;
+  width: 100px;
+  left: -150px; /* start off screen */
+  bottom: 120px;
+  transition: transform 0.8s ease-in-out;
   display: none;
 }
 
-.memories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin: 15px;
+.take {
+  transform: translateX(300px);
 }
 
-.memories img {
-  width: 100%;
-  border-radius: 8px;
+.run-away {
+  transform: translateX(1200px);
+}
+
+
+#letter {
+  width: 180px;
+  cursor: pointer;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#memories {
+  margin-top: 20px;
+}
+
+#memories .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#memories img {
+  width: 30%;
+  border-radius: 10px;
+}
+.hidden{
+  display:none;
 }
 
 .bouquet {
@@ -50,6 +80,13 @@ button {
   max-width: 300px;
 }
 
+#wishText {
+  margin: 20px 0;
+  line-height: 1.8;
+  text-align: center;
+  color: #1f1f1f;
+  max-width: 360px;
+}
 .wish {
   margin: 20px;
   line-height: 1.6;
