@@ -1,5 +1,9 @@
 const scenes = document.querySelectorAll('.scene');
-const music = document.getElementById('music');
+const music = document.getElementById("music");
+
+document.body.addEventListener("click", () => {
+  music.play().catch(() => {});
+}, { once: true });
 
 function showScene(n) {
   scenes.forEach(s => s.classList.remove('active'));
@@ -13,12 +17,28 @@ document.getElementById('cake').onclick = () => {
 };
 
 // SCENE 2
-const noBtn = document.getElementById('no');
-const runner = document.getElementById('runner');
+const noBtn = document.getElementById("no");
+const runner = document.getElementById("runner");
 
 noBtn.onclick = () => {
-  runner.style.display = 'block';
-  noBtn.style.display = 'none';
+  // show runner
+  runner.style.display = "block";
+
+  // runner comes to button
+  setTimeout(() => {
+    runner.classList.add("take");
+  }, 100);
+
+  // remove NO button (runner "takes" it)
+  setTimeout(() => {
+    noBtn.style.display = "none";
+  }, 600);
+
+  // runner runs away
+  setTimeout(() => {
+    runner.classList.remove("take");
+    runner.classList.add("run-away");
+  }, 900);
 };
 
 document.getElementById('yes').onclick = () => {
@@ -26,8 +46,15 @@ document.getElementById('yes').onclick = () => {
 };
 
 // SCENE 3
-document.getElementById('gift').onclick = () => {
-  showScene(3);
+// SCENE 3 — Gift opens, letter appears
+gift.onclick = () => {
+  gift.style.display = "none"; // hide gift
+  letter.style.display = "block"; // show letter only
+};
+// Letter click → show memories + wish
+letter.onclick = () => {
+  letter.style.display = "none";
+  memories.classList.remove("hidden");
 };
 
 // SCENE 4 → 5
