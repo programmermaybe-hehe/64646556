@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: serif;
+  text-align: center;
+  background: lavender;
+  color: black;
+}
+
+.scene {
+  display: none;
+  padding: 20px;
+}
+
+.scene.active {
+  display: block;
+}
+
+video {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 16px;
+}
+
+button {
+  padding: 10px 18px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#runner {
+  width: 120px;
+  display: none;
+}
+
+.memories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 15px;
+}
+
+.memories img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.bouquet {
+  width: 70%;
+  max-width: 300px;
+}
+
+.wish {
+  margin: 20px;
+  line-height: 1.6;
+}
